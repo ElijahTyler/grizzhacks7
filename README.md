@@ -1,1 +1,1 @@
-# GrizzHack7 Project
+# GrizzHacks7 Project
