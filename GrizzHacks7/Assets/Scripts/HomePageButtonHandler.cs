@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,6 +17,7 @@ public class HomePageButtonHandler : MonoBehaviour
     public Camera cam;
     public float ZoomChange;
     public float MinFOV, MaxFOV;
+    public String humanModelTag;
 
     void Start() {
     if (cam == null) {
@@ -89,7 +91,7 @@ public class HomePageButtonHandler : MonoBehaviour
     }
 
     public void Rotate(){
-        GameObject[] humanTransforms = GameObject.FindGameObjectsWithTag("HumanModel");
+        GameObject[] humanTransforms = GameObject.FindGameObjectsWithTag(humanModelTag);
         foreach (GameObject humanTransform in humanTransforms) {
             humanTransform.transform.Rotate(Vector3.up, direction * rotationSpeed * Time.deltaTime);
         }

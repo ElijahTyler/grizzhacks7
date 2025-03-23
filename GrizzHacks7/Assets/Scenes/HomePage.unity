@@ -1264,6 +1264,7 @@ MonoBehaviour:
   ZoomChange: 0
   MinFOV: 0
   MaxFOV: 0
+  humanModelTag: 
 --- !u!1 &354654036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +1927,7 @@ MonoBehaviour:
   ZoomChange: 12
   MinFOV: 20
   MaxFOV: 80
+  humanModelTag: 
 --- !u!1 &560793214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,6 +2230,7 @@ MonoBehaviour:
   ZoomChange: 0
   MinFOV: 0
   MaxFOV: 0
+  humanModelTag: MaleModel
 --- !u!114 &586405943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2589,6 +2592,7 @@ MonoBehaviour:
   ZoomChange: 12
   MinFOV: 20
   MaxFOV: 80
+  humanModelTag: 
 --- !u!224 &665947285 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1968882294874341341, guid: 978b28d6159464e68bb75f01735df52b, type: 3}
@@ -3539,6 +3543,7 @@ MonoBehaviour:
   ZoomChange: 0
   MinFOV: 0
   MaxFOV: 0
+  humanModelTag: 
 --- !u!1 &1042050015
 GameObject:
   m_ObjectHideFlags: 0
@@ -5206,6 +5211,7 @@ MonoBehaviour:
   ZoomChange: 12
   MinFOV: 0
   MaxFOV: 0
+  humanModelTag: MaleModel
 --- !u!114 &1937579950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5525,6 +5531,7 @@ MonoBehaviour:
   ZoomChange: 0
   MinFOV: 20
   MaxFOV: 80
+  humanModelTag: 
 --- !u!114 &2138045420
 MonoBehaviour:
   m_ObjectHideFlags: 0
