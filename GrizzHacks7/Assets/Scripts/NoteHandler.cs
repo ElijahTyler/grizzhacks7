@@ -183,7 +183,7 @@ public class NoteHandler : MonoBehaviour
         viewNotePrefab.SetActive(false);
         editNotePrefab.SetActive(false);
         isNoteUIActive = false;
-        // ! Destroy(gameObject);
+        Destroy(currentNote);
         currentNote = null;
     }
 
