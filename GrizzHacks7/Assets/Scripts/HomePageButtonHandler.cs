@@ -14,6 +14,15 @@ public class HomePageButtonHandler : MonoBehaviour
     public float direction = -1; // -1 = left, 1 = right
     private bool leftButtonHeld = false;
     public Camera cam;
+    public float ZoomChange;
+    public float MinFOV, MaxFOV;
+
+    void Start() {
+    if (cam == null) {
+        cam = Camera.main;
+    }
+}
+
 
     void OnMouseDown()
     {    
@@ -44,11 +53,11 @@ public class HomePageButtonHandler : MonoBehaviour
             }
             else if (button.name == "ZoomInButton")
             {
-                button.onClick.AddListener(ZoomIn);
+                button.onClick.AddListener(Zoom);
             }
             else if (button.name == "ZoomOutButton")
             {
-                button.onClick.AddListener(ZoomOut);
+                button.onClick.AddListener(Zoom);
             }
         }
     }
@@ -86,11 +95,9 @@ public class HomePageButtonHandler : MonoBehaviour
         }
     }
 
-    public void ZoomIn(){
-        //cam.orthographicSize += 
+    public void Zoom() {
+        cam.fieldOfView += ZoomChange * direction;
+        cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, MinFOV, MaxFOV);
     }
 
-    public void ZoomOut(){
-
-    }
 }

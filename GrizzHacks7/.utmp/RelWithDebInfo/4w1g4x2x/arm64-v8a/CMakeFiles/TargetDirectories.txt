@@ -1,0 +1,5 @@
+/Users/brendonm.wolfe/Documents/GitHub/grizzhacks7/GrizzHacks7/.utmp/RelWithDebInfo/4w1g4x2x/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/brendonm.wolfe/Documents/GitHub/grizzhacks7/GrizzHacks7/.utmp/RelWithDebInfo/4w1g4x2x/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/brendonm.wolfe/Documents/GitHub/grizzhacks7/GrizzHacks7/.utmp/RelWithDebInfo/4w1g4x2x/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Users/brendonm.wolfe/Documents/GitHub/grizzhacks7/GrizzHacks7/.utmp/RelWithDebInfo/4w1g4x2x/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/brendonm.wolfe/Documents/GitHub/grizzhacks7/GrizzHacks7/.utmp/RelWithDebInfo/4w1g4x2x/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

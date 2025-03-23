@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - HumanModel
+  - MaleModel
+  - FemaleModel
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,2 @@
+/Users/brendonm.wolfe/Documents/GitHub/grizzhacks7/GrizzHacks7/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/brendonm.wolfe/Documents/GitHub/grizzhacks7/GrizzHacks7/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt

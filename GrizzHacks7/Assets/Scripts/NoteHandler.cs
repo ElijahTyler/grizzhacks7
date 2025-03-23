@@ -1,24 +1,64 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class NoteHandler : MonoBehaviour
 {
     public GameObject notePrefab; 
-    public GameObject noteUIPrefab; 
+    public GameObject viewNotePrefab; 
+    public GameObject editNotePrefab;
     public bool isNoteUIActive = false;
     public Text NoteName;
     public InputField NoteNameField;
     public Button saveButton;
     public Button editButton;
-    public Button closeButton;
+    public Button viewCloseButton;
+    public Button editCloseButton;
     public Button deleteButton;
+    public String humanModelTag;
 
     void Start()
     {
-        if (noteUIPrefab != null)
+        if (viewNotePrefab != null || editNotePrefab != null)
         {
-            noteUIPrefab.SetActive(false);
+            viewNotePrefab.SetActive(false);
+            editNotePrefab.SetActive(false);
         }
+
+        Button[] buttons = viewNotePrefab.GetComponentsInChildren<Button>();
+        foreach (Button button in buttons)
+        {
+            if (button.name == "CloseButton") 
+            {
+                button.onClick.AddListener(CloseNoteUI);
+            }
+            else if (button.name == "EditButton")
+            {
+                button.onClick.AddListener(EditDetails);
+            }
+            else if (button.name == "DeleteButton") 
+            {
+                button.onClick.AddListener(DeleteNote);
+            }
+        }
+
+        Button[] editButtons = editNotePrefab.GetComponentsInChildren<Button>();
+        foreach (Button button in editButtons)
+        {
+            if (button.name == "CloseButton") 
+            {
+                button.onClick.AddListener(CloseNoteUI);
+            }
+            else if (button.name == "DeleteButton") 
+            {
+                button.onClick.AddListener(DeleteNote);
+            }
+            else if (button.name == "SaveButton")
+            {
+                button.onClick.AddListener(SaveDetails);
+            }
+        }
+
     }
 
     void Update()
@@ -28,9 +68,14 @@ public class NoteHandler : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit) && hit.transform == transform)
+            GameObject modelTransform = GameObject.FindGameObjectWithTag(humanModelTag);
+
+            if (Physics.Raycast(ray, out hit) && (hit.collider.gameObject.tag == humanModelTag))
             {
                 PlaceDot(hit.point, hit.normal, hit.transform);
+                Debug.Log("Dot created");
+            } else {
+                Debug.Log("Dot not created");
             }
         }
     }
@@ -39,79 +84,40 @@ public class NoteHandler : MonoBehaviour
     {
         GameObject note = Instantiate(notePrefab, position, Quaternion.LookRotation(normal));
         note.transform.SetParent(parent, true); 
-        NoteInteraction noteInteraction = note.AddComponent<NoteInteraction>();
-        noteInteraction.noteUIPrefab = noteUIPrefab;
-        noteInteraction.noteHandler = this;
+        viewNotePrefab.SetActive(true);
+        isNoteUIActive = true;
     }
-    
-    public void SetNoteUIActive(bool isActive)
-    {
-        isNoteUIActive = isActive;
-    }
-}
-
-public class NoteInteraction : MonoBehaviour
-{
-    public GameObject noteUIPrefab;
-    private GameObject noteUIInstance;
-    public NoteHandler noteHandler;
 
     void OnMouseDown()
     {
-        if (noteHandler.isNoteUIActive) return; 
+        if (isNoteUIActive) return; 
 
-        noteUIInstance = Instantiate(noteUIPrefab);
-        noteUIInstance.SetActive(true); 
-        
-        Button[] buttons = noteUIInstance.GetComponentsInChildren<Button>();
-        foreach (Button button in buttons)
-        {
-            if (button.name == "CloseButton") 
-            {
-                button.onClick.AddListener(CloseNoteUI);
-            }
-            else if (button.name == "DeleteButton") 
-            {
-                button.onClick.AddListener(DeleteDot);
-            }
-            else if (button.name == "SaveButton")
-            {
-                button.onClick.AddListener(SaveName);
-            }
-            else if (button.name == "EditButton")
-            {
-                button.onClick.AddListener(EditDetails);
-            }
-        }
-        
-        noteHandler.SetNoteUIActive(true);
+        viewNotePrefab.SetActive(true); 
+        isNoteUIActive = true;
     }
 
-     void CloseNoteUI()
+    void CloseNoteUI()
     {
-        Destroy(noteUIInstance);
-        noteHandler.SetNoteUIActive(false);
+        viewNotePrefab.SetActive(false);
+        editNotePrefab.SetActive(false);
+        isNoteUIActive = false;
     }
 
-    void DeleteDot(){
-        Destroy(noteUIInstance);
-        noteHandler.SetNoteUIActive(false);
-        Destroy(gameObject);
+    void DeleteNote(){
+        viewNotePrefab.SetActive(false);
+        editNotePrefab.SetActive(false);
+        isNoteUIActive = false;
+        // ! Destroy(gameObject);
     }
 
-    void SaveName(){
-        noteHandler.NoteName.gameObject.SetActive(true);
-        noteHandler.NoteName.text = noteHandler.NoteNameField.text;
-        noteHandler.NoteNameField.gameObject.SetActive(false);
-        noteHandler.saveButton.gameObject.SetActive(false);
-        noteHandler.editButton.gameObject.SetActive(true);
+    void SaveDetails(){
+        viewNotePrefab.SetActive(true);
+        editNotePrefab.SetActive(false);
     }
 
     void EditDetails(){
-        noteHandler.NoteName.gameObject.SetActive(false);
-        noteHandler.NoteNameField.gameObject.SetActive(true);
-        noteHandler.saveButton.gameObject.SetActive(true);
-        noteHandler.editButton.gameObject.SetActive(false);
+        editNotePrefab.SetActive(true);
+        viewNotePrefab.SetActive(false);
     }
 
 
