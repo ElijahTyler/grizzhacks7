@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4459046-7679-2458-62DA-551ADB505BBC}|Assembly-CSharp.csproj|c:\\users\\ttjtv\\onedrive\\documents\\github\\grizzhacks7\\grizzhacks7\\assets\\scenes\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4459046-7679-2458-62DA-551ADB505BBC}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4459046-7679-2458-62DA-551ADB505BBC}|Assembly-CSharp.csproj|C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\assets\\scenes\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4459046-7679-2458-62DA-551ADB505BBC}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4459046-7679-2458-62DA-551ADB505BBC}|Assembly-CSharp.csproj|C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\assets\\scenes\\createaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4459046-7679-2458-62DA-551ADB505BBC}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\createaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4459046-7679-2458-62DA-551ADB505BBC}|Assembly-CSharp.csproj|C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\assets\\scenes\\dbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4459046-7679-2458-62DA-551ADB505BBC}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\dbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DBManager.cs",
+              "DocumentMoniker": "C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\Assets\\Scenes\\DBManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\DBManager.cs",
+              "ToolTip": "C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\Assets\\Scenes\\DBManager.cs",
+              "RelativeToolTip": "Assets\\Scenes\\DBManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:38:08.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\Assets\\Scenes\\Login.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Login.cs",
+              "ToolTip": "C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\Assets\\Scenes\\Login.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Login.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwCkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:28:44.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "createAccount.cs",
+              "DocumentMoniker": "C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\Assets\\Scenes\\createAccount.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\createAccount.cs",
+              "ToolTip": "C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\Assets\\Scenes\\createAccount.cs",
+              "RelativeToolTip": "Assets\\Scenes\\createAccount.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwD4AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T01:54:50.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\Assets\\Scenes\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\ttjtv\\OneDrive\\Documents\\GitHub\\grizzhacks7\\GrizzHacks7\\Assets\\Scenes\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scenes\\MainMenu.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T01:39:55.019Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
