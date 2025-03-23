@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/HomePage.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/StatsPages.unity
+    path: Assets/Scenes/StatsPage.unity
     guid: 21462e375ca25497085bb3da12de588f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ea67b41ceac9d44b797e9e13e06e200f, type: 2}
