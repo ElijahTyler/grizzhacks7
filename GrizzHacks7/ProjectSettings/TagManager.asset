@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MaleModel
   - FemaleModel
+  - UserID
   layers:
   - Default
   - TransparentFX
