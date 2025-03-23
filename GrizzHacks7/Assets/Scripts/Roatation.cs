@@ -6,7 +6,8 @@ public class Roatation : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal"); 
+        float horizontal = Input.GetAxis("Horizontal");
+        // Debug.Log(horizontal);
 
         transform.Rotate(Vector3.up, horizontal * rotationSpeed * Time.deltaTime);
     }

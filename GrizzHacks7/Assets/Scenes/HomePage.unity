@@ -1094,6 +1094,8 @@ MonoBehaviour:
   HomeUI: {fileID: 1152630178}
   ProfilePage: {fileID: 1145583260}
   SettingsPage: {fileID: 1498536877}
+  rotationSpeed: 100
+  direction: -1
 --- !u!1 &354654036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,6 +1777,8 @@ GameObject:
   - component: {fileID: 586405941}
   - component: {fileID: 586405940}
   - component: {fileID: 586405939}
+  - component: {fileID: 586405942}
+  - component: {fileID: 586405943}
   m_Layer: 5
   m_Name: RotateLeftButton
   m_TagString: Untagged
@@ -1845,7 +1849,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 586405940}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 586405942}
+        m_TargetAssemblyTypeName: HomePageButtonHandler, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
 --- !u!114 &586405940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,6 +1900,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586405937}
   m_CullTransparentMesh: 1
+--- !u!114 &586405942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586405937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e4801e1e404405690f6cf5b6d8589e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HomeUI: {fileID: 1152630178}
+  ProfilePage: {fileID: 1145583260}
+  SettingsPage: {fileID: 1498536877}
+  rotationSpeed: 100
+  direction: -1
+--- !u!114 &586405943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586405937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 586405942}
+          m_TargetAssemblyTypeName: HomePageButtonHandler, Assembly-CSharp
+          m_MethodName: OnPointerDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 586405942}
+          m_TargetAssemblyTypeName: HomePageButtonHandler, Assembly-CSharp
+          m_MethodName: OnPointerUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &600753629 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2304274126349068924, guid: 3104088b024a1457da266639957b63d0, type: 3}
@@ -2842,6 +2920,8 @@ MonoBehaviour:
   HomeUI: {fileID: 1152630178}
   ProfilePage: {fileID: 1145583260}
   SettingsPage: {fileID: 1498536877}
+  rotationSpeed: 100
+  direction: -1
 --- !u!1 &1042050015
 GameObject:
   m_ObjectHideFlags: 0
@@ -3989,9 +4069,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2304274126349068924, guid: 3104088b024a1457da266639957b63d0, type: 3}
+      propertyPath: m_TagString
+      value: HumanModel
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3104088b024a1457da266639957b63d0, type: 3}
       propertyPath: m_Name
       value: lowPolyMan2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3104088b024a1457da266639957b63d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3104088b024a1457da266639957b63d0, type: 3}
+      propertyPath: m_TagString
+      value: HumanModel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4356,6 +4448,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slender_Woman_Lores
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7e23f11237b164f55a04cebeba265d24, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7e23f11237b164f55a04cebeba265d24, type: 3}
+      propertyPath: m_TagString
+      value: HumanModel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4382,6 +4482,8 @@ GameObject:
   - component: {fileID: 1937579948}
   - component: {fileID: 1937579947}
   - component: {fileID: 1937579946}
+  - component: {fileID: 1937579949}
+  - component: {fileID: 1937579950}
   m_Layer: 5
   m_Name: RotateRightButton
   m_TagString: Untagged
@@ -4452,7 +4554,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1937579947}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1937579949}
+        m_TargetAssemblyTypeName: HomePageButtonHandler, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
 --- !u!114 &1937579947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4491,6 +4605,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937579944}
   m_CullTransparentMesh: 1
+--- !u!114 &1937579949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937579944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e4801e1e404405690f6cf5b6d8589e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HomeUI: {fileID: 1152630178}
+  ProfilePage: {fileID: 1145583260}
+  SettingsPage: {fileID: 1498536877}
+  rotationSpeed: 100
+  direction: 1
+--- !u!114 &1937579950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937579944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1937579949}
+          m_TargetAssemblyTypeName: HomePageButtonHandler, Assembly-CSharp
+          m_MethodName: OnPointerDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1937579949}
+          m_TargetAssemblyTypeName: HomePageButtonHandler, Assembly-CSharp
+          m_MethodName: OnPointerUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1963839381
 GameObject:
   m_ObjectHideFlags: 0
@@ -4761,6 +4937,8 @@ MonoBehaviour:
   HomeUI: {fileID: 1152630178}
   ProfilePage: {fileID: 1145583260}
   SettingsPage: {fileID: 1498536877}
+  rotationSpeed: 100
+  direction: -1
 --- !u!114 &2138045420
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+// using UnityEngine.UIElements;
 
 public class HomePageButtonHandler : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class HomePageButtonHandler : MonoBehaviour
     private GameObject HomeUIInstance;
     public GameObject ProfilePage;
     public GameObject SettingsPage;
+    public float rotationSpeed = 100f;
+    public float direction = -1; // -1 = left, 1 = right
+    private bool leftButtonHeld = false;
+    public Camera cam;
 
     void OnMouseDown()
     {    
@@ -31,11 +36,11 @@ public class HomePageButtonHandler : MonoBehaviour
             }
             else if (button.name == "RotateLeftButton")
             {
-                button.onClick.AddListener(RotateLeft);
+                button.onClick.AddListener(Rotate);
             }
             else if (button.name == "RotateRightButton")
             {
-                button.onClick.AddListener(RotateRight);
+                button.onClick.AddListener(Rotate);
             }
             else if (button.name == "ZoomInButton")
             {
@@ -45,6 +50,20 @@ public class HomePageButtonHandler : MonoBehaviour
             {
                 button.onClick.AddListener(ZoomOut);
             }
+        }
+    }
+
+    public void OnPointerDown(){
+        leftButtonHeld = true;
+    }
+
+    public void OnPointerUp(){
+        leftButtonHeld = false;
+    }
+
+    public void Update(){
+        if (leftButtonHeld){
+            Rotate();
         }
     }
 
@@ -59,17 +78,16 @@ public class HomePageButtonHandler : MonoBehaviour
     public void OpenSettings(){
         SettingsPage.SetActive(!SettingsPage.activeSelf);
     }
-    
-    public void RotateLeft(){
 
-    }
-
-    public void RotateRight(){
-
+    public void Rotate(){
+        GameObject[] humanTransforms = GameObject.FindGameObjectsWithTag("HumanModel");
+        foreach (GameObject humanTransform in humanTransforms) {
+            humanTransform.transform.Rotate(Vector3.up, direction * rotationSpeed * Time.deltaTime);
+        }
     }
 
     public void ZoomIn(){
-
+        //cam.orthographicSize += 
     }
 
     public void ZoomOut(){
